@@ -1,0 +1,63 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "globals": {
+        "app": "readonly"
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:sonarjs/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "plugins": [
+        "prettier", "sonarjs", "unicorn"
+    ],
+    "parserOptions": {
+        "parser": "@babel/eslint-parser",
+        "sourceType": "module"
+    },
+    "rules": {
+        // Only allow debugger in development
+        "no-debugger": "error",
+        "no-console": "off",
+        "import/named": 1,
+        "import/no-useless-path-segments": 0,
+        "import/prefer-default-export": 0,
+        "no-unused-vars": [
+            "error",
+            { "vars": "all", "args": "none", "ignoreRestSiblings": false }
+        ],
+        "no-param-reassign": [
+            "error",
+            {
+                "props": true,
+                "ignorePropertyModificationsFor": [
+                    "state"
+                ]
+            }
+        ],
+        "no-underscore-dangle": 0,
+        "no-unused-expressions": 0,
+        "sonarjs/no-identical-expressions": "error",
+        "sonarjs/no-identical-functions": "warn",
+        "sonarjs/no-duplicate-string": 0,
+        "import/no-unresolved": 0,
+        "import/extensions": 0,
+        "sonarjs/cognitive-complexity": ["warn", 15],
+        "unicorn/no-abusive-eslint-disable": "warn",
+        "unicorn/prevent-abbreviations": 0,
+        "unicorn/filename-case": [
+            "error",
+            {
+                "cases": {
+                    "camelCase": true,
+                    "pascalCase": true
+                }
+            }
+        ]
+    }
+}

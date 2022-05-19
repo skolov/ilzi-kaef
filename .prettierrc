@@ -1,0 +1,13 @@
+{
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "overrides": [
+        {
+            "files": "*.pug",
+            "options": {
+                "tabWidth": 4
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+extends /layouts/page
+include /components/title/title
+include /components/icon/icon
+
+block title
+    | Главная
+
+block content
+    h1.title1 TEST
+    +title('Главная страница')
+    img(src='~images/lorem-img.png', width='300px')
+    +icon('clock', 100, 100)

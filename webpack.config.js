@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path')
 const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -19,6 +20,7 @@ class Path {
     static layouts = path.resolve(Path.root, 'layouts')
     static js = path.resolve(Path.root, 'js')
     static entry = path.resolve(Path.js, 'main.js')
+    static libs = path.resolve(Path.js, 'libs')
     static output = path.resolve(Path.root, 'dist')
     static pages = path.resolve(Path.root, 'pages')
 
@@ -28,6 +30,10 @@ class Path {
 
     static page(file) {
         return path.resolve(Path.pages, file)
+    }
+
+    static lib(file) {
+        return path.resolve(Path.libs, file)
     }
 }
 
@@ -163,5 +169,9 @@ module.exports = {
                     minify: false,
                 })
         ),
+        new webpack.ProvidePlugin({
+            $: Path.lib('jquery-3.6.0.min.js'),
+            jQuery: Path.lib('jquery-3.6.0.min.js')
+        })
     ],
 }

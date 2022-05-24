@@ -26,6 +26,7 @@ class Path {
 
     static assets = path.resolve(Path.root, 'assets')
     static images = path.resolve(Path.assets, 'images')
+    static icons = path.resolve(Path.assets, 'icons')
     static fonts = path.resolve(Path.assets, 'fonts')
 
     static page(file) {
@@ -139,8 +140,9 @@ module.exports = {
             },
 
             {
-                test: /\.(png|jpg|jpeg|gif)$/i,
+                test: /\.(png|jpg|jpeg|gif|svg)$/i,
                 type: 'asset/resource',
+                exclude: Path.icons,
                 generator: {
                     filename: '[path][name].[hash][ext]',
                 },
@@ -148,6 +150,7 @@ module.exports = {
 
             {
                 test: /\.svg$/,
+                exclude: Path.images,
                 use: [
                     { loader: 'svg-sprite-loader', options: {} },
                     'svg-transform-loader',

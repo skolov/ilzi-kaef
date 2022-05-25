@@ -3,6 +3,7 @@ const path = require('path')
 const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const globImporter = require('node-sass-glob-importer')
 const getLogger = require('webpack-log')
 const log = getLogger({ name: 'webpack' })
@@ -100,6 +101,17 @@ module.exports = {
                         loader: 'html-loader',
                         options: {
                             minimize: false,
+                            sources: {
+                                list: [
+                                    '...',
+                                    {
+                                        tag: 'use',
+                                        attribute: 'xlink:href',
+                                        type: 'src',
+                                        filter: () => false,
+                                    },
+                                ],
+                            },
                         },
                     },
                     {
@@ -152,7 +164,13 @@ module.exports = {
                 test: /\.svg$/,
                 exclude: Path.images,
                 use: [
-                    { loader: 'svg-sprite-loader', options: {} },
+                    {
+                        loader: 'svg-sprite-loader',
+                        options: {
+                            extract: true,
+                            outputPath: 'assets/icons/',
+                        }
+                    },
                     'svg-transform-loader',
                     'svgo-loader',
                 ],
@@ -161,6 +179,7 @@ module.exports = {
     },
 
     plugins: [
+        new SpriteLoaderPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
         }),

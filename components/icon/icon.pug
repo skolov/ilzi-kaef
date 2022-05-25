@@ -2,4 +2,4 @@ mixin icon(name, width, height)
     - width = width || 24
     - height = height || 24
     +b.SVG.icon(width=width, height=height)&attributes(attributes)
-        use(xlink:href=`#${name}`)
+        use(xlink:href=`assets/icons/sprite.svg#${name}`)

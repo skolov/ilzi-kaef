@@ -16,14 +16,16 @@ const EXT = {
 class Path {
     static root = path.resolve(__dirname)
 
-    static components = path.resolve(Path.root, 'components')
     static nodeModules = path.resolve(Path.root, 'node_modules')
+    static components = path.resolve(Path.root, 'components')
     static layouts = path.resolve(Path.root, 'layouts')
+    static output = path.resolve(Path.root, 'dist')
+    static pages = path.resolve(Path.root, 'pages')
+    static data = path.resolve(Path.root, 'data')
+
     static js = path.resolve(Path.root, 'js')
     static entry = path.resolve(Path.js, 'main.js')
     static libs = path.resolve(Path.js, 'libs')
-    static output = path.resolve(Path.root, 'dist')
-    static pages = path.resolve(Path.root, 'pages')
 
     static assets = path.resolve(Path.root, 'assets')
     static images = path.resolve(Path.assets, 'images')
@@ -37,12 +39,21 @@ class Path {
     static lib(file) {
         return path.resolve(Path.libs, file)
     }
+
+    static dataFile(file) {
+        return path.resolve(Path.data, file)
+    }
 }
 
 const pages = fs.readdirSync(Path.pages).map((file) => ({
     name: path.parse(file).name + EXT.HTML,
     path: Path.page(file),
 }))
+
+const dataFiles = fs.readdirSync(Path.data).reduce((acc, file) => ({
+    ...acc,
+    [path.parse(file).name]: require(Path.dataFile(file))
+}), {})
 
 if (fs.existsSync(Path.output)) {
     log.info('Чистим dist')
@@ -119,6 +130,11 @@ module.exports = {
                         options: {
                             basedir: Path.root,
                             pretty: true,
+                            data: {
+                                data: {
+                                    ...dataFiles
+                                },
+                            },
                         },
                     },
                 ],

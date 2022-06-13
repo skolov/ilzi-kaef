@@ -1,4 +1,10 @@
 @use 'mixins' as mixins;
 @use 'assets/fonts/OpenSans/use' as OpenSans;
+@use 'assets/fonts/AmericanTypewriter/use' as AmericanTypewriter;
+@use 'assets/fonts/Montserrat/use' as Montserrat;
+@use 'assets/fonts/Lato/use' as Lato;
 
 @include mixins.useFont(OpenSans.$description);
+@include mixins.useFont(AmericanTypewriter.$description);
+@include mixins.useFont(Montserrat.$description);
+@include mixins.useFont(Lato.$description);

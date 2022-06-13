@@ -1,2 +1,22 @@
+include /components/icon/icon
+
 mixin header()
-    +b.header
+    +b.HEADER.header
+        +e.inner
+            +e.A.logo-link.link(href='/' target="_self")
+                +icon('logo').header__logo-icon
+                +e.logo-text Пресс <br> Индекс
+            +e.wrapper
+                +e.UL.menu
+                    +e.LI.menu-item
+                        +e.A.link.link(href='/' target="_self") Услуги
+                    +e.LI.menu-item 
+                        +e.A.link.link(href='/' target="_self") Возможности
+                +e.contact
+                    +e.lable Ваш менеджер
+                    +e.A.tel.link(href='tel:+7 (495) 374 44 55' target="_self")  +7 (495) 374 44 55
+            +e.A.button.link(href='/' target="_self")
+                +e.P.btn-text Приобрести
+                +icon('arrow_right', 22, 18).arrow
+            +e.burget 
+                +icon('burger', 37, 37).link.header__burger

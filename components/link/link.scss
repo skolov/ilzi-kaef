@@ -1,0 +1,18 @@
+.link {
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+
+    &:hover {
+        transition: 0.1s linear;
+        opacity: 0.7;
+    }
+
+    &:active {
+        color: $black;
+    }
+    
+    &:visited {
+        color: $black;
+    }
+}

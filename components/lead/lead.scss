@@ -1,0 +1,101 @@
+.lead {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__headline-col {
+        display: flex;
+        flex-direction: column;
+        overflow-y: hidden;
+    }
+
+    &__left {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 1003px;
+
+    }
+
+    &__title {
+        font-family: 'AmericanTypewriter';
+        font-weight: 400;
+        font-size: 100px;
+        line-height: 90px;
+        margin: 180px 0 89px 69px;
+        z-index: 6;
+    }
+
+    &__about {
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        width: 100%;
+        max-width: 243px;
+        margin: 0 0 90px 67px;
+        z-index: 6;
+    }
+
+    &__back-gradient {
+        width: 743px;
+        height: 387px;
+        position: absolute;
+        top: 220px;
+        right: 150px;
+        background: linear-gradient(to top, $smallGradientTo 5%, $smallGradientFrom 100%);
+    }
+
+
+    &__back-rectangle {
+        width: 624px;
+        height: 829px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: linear-gradient(to top, $largeGradientTo 100%, $largeGradiaentFrom 0%);
+    }
+
+    &__picture {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 624px;
+        height: 829px;
+        z-index: 5;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1920px;
+        padding: 0 113px 0 98px;
+        min-height: 829px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__italic-col {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        background: beige;
+        writing-mode: vertical-rl;
+    }
+
+    &__about {
+        // width: 100%;
+        // max-width: 243px;
+    }
+}
+

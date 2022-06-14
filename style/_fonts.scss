@@ -3,8 +3,12 @@
 @use 'assets/fonts/AmericanTypewriter/use' as AmericanTypewriter;
 @use 'assets/fonts/Montserrat/use' as Montserrat;
 @use 'assets/fonts/Lato/use' as Lato;
+@use '/assets/fonts/NimbusMono/use' as NimbusMono;
+@use '/assets/fonts/Roboto/use' as Roboto;
 
 @include mixins.useFont(OpenSans.$description);
 @include mixins.useFont(AmericanTypewriter.$description);
 @include mixins.useFont(Montserrat.$description);
 @include mixins.useFont(Lato.$description);
+@include mixins.useFont(NimbusMono.$description);
+@include mixins.useFont(Roboto.$description);

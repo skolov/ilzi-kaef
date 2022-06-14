@@ -1,17 +1,20 @@
+include /components/button/button
+
 mixin lead()
     +b.lead
         +e.inner
-            +e.left
-                +e.italic-col
-                    +e.P.italic-text Система мониторинга
-                +e.headline-col
-                    +e.H1.title Пресc <br> Индекс
-                    +e.P.about Самые обсуждаемые темы в СМИ, соцсетях и telegram в режиме реального времени в одном сервисе 
-                    +e.btn Подробнее
-                    +e.back-gradient
-                    +e.back-rectangle 
-                    +e.IMG.picture(src='~images/www.png')
-            +e.right
-                +e.slider-col 
-                    +e.slider
-                    +e.link-more
+            - const item = { text: "Подробнее"}
+                +e.left
+                    +e.italic-col
+                        +e.P.italic-text Система мониторинга
+                    +e.headline-col
+                        +e.H1.title Пресc <br> Индекс
+                        +e.P.about Самые обсуждаемые темы в СМИ, соцсетях и telegram в режиме реального времени в одном сервисе 
+                        +button({text: item.text})
+                        +e.back-gradient
+                        +e.back-rectangle 
+                        +e.IMG.picture(src='~images/www.png')
+                +e.right
+                    +e.slider-col 
+                        +e.slider
+                        +e.link-more

@@ -141,6 +141,10 @@
         }
     }
 
+    &__arrow-right {
+        fill: $arrowHeader;
+    }
+
     &__burger {
         display: none;
 

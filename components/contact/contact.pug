@@ -1,0 +1,11 @@
+include /components/button/button
+
+mixin contact()
+    +b.contact
+        +e.inner 
+            - const item = { text: "Попробовать"}
+                +e.wrapper
+                    +e.P.acsess Бесплатный доступ
+                    +e.P.dsc Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                    +e.INPUT.input(placeholder="Введите ваш номер телефона")
+                    +button({text: item.text})

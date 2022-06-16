@@ -2,6 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 56px;
+    margin-bottom: 56px;
 
     &__inner {
         width: 100%;
@@ -10,7 +12,6 @@
     }
 
     &__content-wraper {
-        background-color: aqua;
         width: 100%;
         max-width: 1476px;
         margin: 0 auto;
@@ -37,6 +38,10 @@
         max-width: 428px;
         display: flex;
         flex-direction: column;
+        margin-right: 80px;
+        &:last-of-type {
+            margin-right: 0;
+        }
     }
 
     &__image {

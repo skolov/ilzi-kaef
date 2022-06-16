@@ -1,3 +1,5 @@
+include /components/icon/icon
+
 mixin function()
     +b.function
         +e.inner
@@ -7,16 +9,20 @@ mixin function()
                     +e.P.text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
                     +e.UL.tabs 
                         +e.LI.tab(data-tab-trigger=1).is-active добавление конкурента
+                            +icon('tab', 528, 144).function__icon
                         +e.LI.tab(data-tab-trigger=2) мониторинг конкурента
+                            +icon('tab', 528, 144).function__icon
                         +e.LI.tab(data-tab-trigger=3) список конкурентов
+                            +icon('tab', 528, 144).function__icon
             +e.image-col
                 +e.tab-outer 
                     +e.tab-content(data-tab-content=1).is-open
-                        +e.IMG(src="" alt="")
-                        +e.P 1
+                        +e.IMG(src="/assets/images/fun/tab-image-1-back.jpg" alt="").back-img
+                        +e.IMG(src="/assets/images/fun/tab-image-1.jpg" alt="").img
                     +e.tab-content(data-tab-content=2)
-                        +e.IMG(src="" alt="")
-                        +e.P 2
+                        +e.IMG(src="/assets/images/fun/tabs-image-back-2.jpg" alt="").back-img
+                        +e.IMG(src="/assets/images/fun/tabs-image-2.jpg" alt="").img
                     +e.tab-content(data-tab-content=3)
-                        +e.IMG(src="" alt="")
-                        +e.P 3
+                        +e.IMG(src="/assets/images/fun/tabs-image-back-3.jpg" alt="").back-img
+                        +e.IMG(src="/assets/images/fun/tabs-image-3.jpg" alt="").img
+                        +e.IMG(src="/assets/images/fun/tabs-image-3-2.jpg" alt="").img

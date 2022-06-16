@@ -5,6 +5,7 @@ $(() => {
         TABS: `${BLOCK_NAME}__tabs`,
         TAB: `${BLOCK_NAME}__tab`,
         CONTENT: `${BLOCK_NAME}__tab-content`,
+        ACTLINEONE: `${BLOCK_NAME}__icon`,
     }
 
     const SELECTOR = {
@@ -12,6 +13,7 @@ $(() => {
         TABS: `.${ELEMENT.TABS}`,
         TAB: `.${ELEMENT.TAB}`,
         CONTENT: `.${ELEMENT.CONTENT}`,
+        ACTLINEONE: `.${ELEMENT.CONTENT}`,
     }
 
     const MODIFIER = {
@@ -23,6 +25,9 @@ $(() => {
     const $tabsWrapper = $(SELECTOR.TABS, $root)
     const $tabs = $(SELECTOR.TAB, $tabsWrapper)
     const $tabsContent = $(SELECTOR.CONTENT, $root)
+    const $lineOne = $(SELECTOR.CONTENT, $root)
+
+    console.log($lineOne, 'ddd')
 
     $tabs.each(function () {
         const $tab = $(this)

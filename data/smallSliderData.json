@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "link": "/",
+      "image": "slider-image-1.jpg",
+      "date": "04 / 02 / 2020",
+      "title": "Новые возможности системы мониторинга",
+      "about": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."
+    },
+    {
+      "link": "/",
+      "image": "heart.jpg",
+      "date": "03 / 07 / 2025",
+      "title": "Новые возможности системы мониторинга222",
+      "about": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa."
+    },
+    {
+      "link": "/",
+      "image": "keyboard.jpg",
+      "date": "05 / 06 / 2024",
+      "title": "Новые возможности системы мониторинга333",
+      "about": "Lorem ipsum dolor sit amet, consectetuer adipis"
+    }
+  ]
+}

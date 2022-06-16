@@ -1,0 +1,27 @@
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 38px 68px 34px 37px;
+    background-color: #2c4672;
+    width: 100%;
+    max-width: 281px;
+   
+    &__icon {
+        margin-right: 22px;
+        height: 54px;
+        width: 52px;
+        fill: $white;
+    }
+    &__text {
+        font-family: 'AmericanTypewriter';
+        font-size: 26px;
+        line-height: 28px;
+        color: $white;
+    }
+}
+
+
+
+

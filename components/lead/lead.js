@@ -1,11 +1,11 @@
 $(() => {
-    const BLOCK_NAME = 'large-slider'
+    const BLOCK_NAME = 'slider'
     const ELEMENT = {
         ROOT: BLOCK_NAME,
-        CONTENT_BOX: 'large-slider__content',
-        TOGGLER_LEFT: '.large-slider__right-arrow',
-        TOGGLER_RIGHT: '.large-slider__left-arrow',
-        CONTENT: 'large-slider__slide',
+        CONTENT_BOX: 'slider__content',
+        TOGGLER_LEFT: '.lead__slider-left',
+        TOGGLER_RIGHT: '.lead__slider-right',
+        CONTENT: 'slide',
     }
 
     const SELECTOR = {
@@ -19,13 +19,11 @@ $(() => {
     const $root = $(SELECTOR.ROOT)
     const $slidesBox = $(SELECTOR.CONTENT_BOX, $root)
     const $slides = $(SELECTOR.CONTENT, $slidesBox)
-    const $togglerLeft = $(SELECTOR.TOGGLER_LEFT, $root)
-    const $togglerRight = $(SELECTOR.TOGGLER_RIGHT, $root)
+    const $togglerLeft = $(SELECTOR.TOGGLER_LEFT)
+    const $togglerRight = $(SELECTOR.TOGGLER_RIGHT)
 
     const sliderLength = $slides.length
     const lastSlideIdx = sliderLength - 1
-
-    console.log(sliderLength)
 
     let activeSlideIdx
 
@@ -38,7 +36,6 @@ $(() => {
     }
 
     function changeActiveSlide(idx) {
-        console.log('kk')
         $slides.eq(activeSlideIdx).hide()
         $slides.eq(idx).show()
 
@@ -46,7 +43,6 @@ $(() => {
     }
 
     function nextSlide() {
-        console.log('right')
         if (activeSlideIdx <= 0) {
             changeActiveSlide(lastSlideIdx)
         } else {

@@ -1,0 +1,48 @@
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+        width: 100%;
+        max-width: 1920px;
+        min-height: 918px;
+        display: flex;
+        flex-direction: row;
+        background: linear-gradient(to left, rgba(236, 236, 236, 0.54) 0%, rgba(251, 251, 251, 0.44) 100%);
+        padding-top: 79px;
+        padding-bottom: 108px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1482px;
+        margin: 0 auto;
+    }
+
+    &__card {
+        width: 100%;
+        max-width: 418px;
+    }
+
+    &__icon {
+        margin-bottom: 34px;
+    }
+
+    &__title {
+        font-family: 'NimbusMono';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
+        padding-bottom: 19px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid $black;
+    }
+
+    &__dsc {
+        font-family: 'Roboto';
+        color: #4F4F4F;
+        font-size: 14px;
+        line-height: 22px;
+    }
+}

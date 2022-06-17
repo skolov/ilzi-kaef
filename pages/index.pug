@@ -1,14 +1,38 @@
 extends /layouts/page
 include /components/title/title
 include /components/icon/icon
+include /components/lead/lead
+include /components/large-slider/large-slider
+include /components/contact/contact
+include /components/function/function
+include /components/video/video
+include /components/popup/popup
+include /components/cards/cards
 
 block title
     | Главная
 
 block content
-    h1.title1 TEST
-    +title('Главная страница')
-    img(src='~images/lorem-img.png', width='300px')
-    +icon('clock', 100, 100)
+
+    +lead 
+
+    +large-slider
+
+    +contact
+
+    +function
+
+    +video
+
+    +cards
+
+    +popup
     
-    span= data.example.test
+    //- h1.title1 TEST
+    //- +title('Главная страница')
+    //- img(src='~images/lorem-img.png', width='300px')
+    //- +icon('clock', 100, 100)
+    
+    //- span= data.example.test
+
+

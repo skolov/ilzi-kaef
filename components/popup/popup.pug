@@ -1,0 +1,16 @@
+include /components/icon/icon
+
+mixin popup()
+    +b.popup 
+        +e.inner 
+        +e.wrap 
+            +e.btn-close
+                +icon('popup_close.svg')
+            +e.content
+                +e.VIDEO.video(width="1331" height="772" id="preview-video")
+                    +e.SOURCE(src="https://video-previews.elements.envatousercontent.com/files/e175cebe-8d04-48fc-b989-b21ea4ee09e9/video_preview_h264.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+                +icon('as', 191, 191).popup__play
+        +e.overlay
+
+
+        

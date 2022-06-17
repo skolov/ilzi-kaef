@@ -1,0 +1,56 @@
+$bp-default: 1800px;
+$bp-widescreen: 1599px;
+$bp-desktop: 1215px;
+$bp-tablet: 1193px;
+$bp-tabletM: 768px;
+$bp-mobile: 559px;
+$bp-mobileS: 425px;
+
+@mixin adaptiveFont($bp, $size, $lh) {
+  @media (max-width: $bp) {
+    font-size: $size;
+    line-height: $lh;
+  }
+}
+
+@mixin media-default {
+  @media (max-width: $bp-default) {
+    @content;
+  }
+}
+
+@mixin media-widescreen {
+  @media (max-width: $bp-widescreen) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (max-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $bp-tablet) {
+    @content;
+  }
+}
+
+@mixin media-tabletM {
+  @media (max-width: $bp-tabletM) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}
+
+@mixin media-mobileS {
+  @media (max-width: $bp-mobileS) {
+    @content;
+  }
+}

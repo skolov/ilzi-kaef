@@ -1,0 +1,6 @@
+include /components/icon/icon
+
+mixin button({text})
+    +b.A.button.link(href='/' target="_self")
+        +e.P.btn-text= text
+        +icon('arrow_right', 22, 18).header__arrow-right

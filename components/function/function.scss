@@ -1,0 +1,112 @@
+.function {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+        width: 100%;
+        max-width: 1920px;
+        min-height: 838px;
+        background-image: linear-gradient(#ECECEC 0%, #FBFBFB 100%);
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__text-col {
+        width: 100%;
+        max-width: 908px;
+        display: flex;
+        flex-direction: column;
+        padding: 116px 176px 147px 217px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        max-width: 488px;
+    }
+
+    &__title {
+        font-family: 'NimbusMono';
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 80px;
+        margin-bottom: 23px;
+    }
+
+    &__text {
+        font-family: 'Roboto';
+        width: 100%;
+        max-width: 515px;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0 0 71px 0;
+    }
+
+    &__tabs {
+        list-style-type: none;
+        padding-left: 0;
+        width: 100%;
+        max-width: 437px;
+        margin: 0;
+    }
+
+    &__tab {
+        font-family: 'NimbusMono';
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 32px;
+        padding: 13px 26px;
+        margin-right: 10px;
+        margin-bottom: 17px;
+        position: relative;
+        
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #000000;
+            color: $white;
+        }
+
+        &.is-active {
+            cursor: pointer;
+            background-color: #000000;
+            color: $white;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: -115px;
+        right: -488px;
+    }
+
+    &__tab-content {
+        display: none;
+        position: relative;
+
+        &.is-open {
+            display: flex;
+            justify-content: space-between;
+
+            @include media-default {
+                justify-content: space-evenly;
+            }
+        }
+    }
+
+    &__back-img {
+        position: relative;
+        left:204px;
+        top: 121px;
+        overflow: hidden;
+    }
+
+    &__img {
+        position: absolute;
+        top: 294px;
+        left: 0;
+    }
+}

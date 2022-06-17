@@ -1,0 +1,37 @@
+include /components/button/button
+
+mixin lead()
+    +b.lead
+        +e.inner
+            - const item = { text: "Подробнее"}
+                +e.left
+                    +e.italic-col
+                        +e.P.italic-text Система мониторинга
+                    +e.headline-col
+                        +e.H1.title Пресc <br> Индекс
+                        +e.P.about Самые обсуждаемые темы в СМИ, соцсетях и telegram в режиме реального времени в одном сервисе 
+                        +e.btn
+                            +button({text: item.text})
+                        +e.back-gradient
+                        +e.back-rectangle 
+                        +e.IMG.picture(src='~images/www.png')
+                +e.right
+                    +e.slider-col 
+                        +b.slider
+                            +e.content
+                                each item in data.smallSliderData.items
+                                    +b.slide
+                                        +e.IMG.image(src=`~images/${item.image}` alt=`${item.title}`)
+                                        +e.date= item.date
+                                        +e.P.title= item.title
+                                        +e.P.about= item.about
+                        +e.controls
+                            +e.BUTTON.slider-left.link
+                                +icon('arrow_left').slider__arrow-icon
+                            +e.BUTTON.slider-right.link
+                                +icon('arrow_right').slider__arrow-right
+                        +e.link-more
+                            +e.P.more Как работает система?
+                            +e.A.link(href="/" target="_blanck").link
+                                +e.P.link-text Описание разных плюшек
+                                +icon('arrow_right').link-icon

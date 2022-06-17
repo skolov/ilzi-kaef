@@ -1,0 +1,33 @@
+include /components/logo/logo
+include /components/icon/icon
+
+mixin footer()
+    +b.footer 
+        +e.inner
+            +e.wrapper
+                +logo
+                +e.menu-wrapper
+                    +e.UL.nav-menu
+                        +e.LI.menu-item
+                            +e.A.link(href="" target="_self") Услуги
+                        +e.LI.menu-item
+                            +e.A.link(href="" target="_self") Отзывы
+                        +e.LI.menu-item
+                            +e.A.link(href="" target="_self") API
+                        +e.LI.menu-item
+                            +e.A.link(href="" target="_self") Контакты
+                        +e.LI.menu-item
+                            +e.A.link(href="" target="_self") Тарифы
+                        +e.LI.menu-item
+                            +e.A.link(href="" target="_self") F.A.Q.
+                    +e.UL.nav-social 
+                        +e.LI.social-item
+                            +e.A.link.footer__insta.link(href="" target="_self")
+                                +icon('instagram')
+                        +e.LI.social-item
+                            +e.A.link.footer__fb.link(href="" target="_self")
+                                +icon('facebook')
+                        +e.LI.social-item
+                            +e.A.link.footer__vk.link(href="" target="_self")
+                                +icon('vk', 32, 32)
+

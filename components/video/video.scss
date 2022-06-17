@@ -9,18 +9,11 @@
         background: $white;
         display: flex;
         flex-direction: row;
-
     }
 
     &__image-wrapper {
         margin: 71px 0 95px 0;
         position: relative;
-
-        
-    }
-
-    &__image {
-        
     }
 
     &__play {
@@ -63,7 +56,5 @@
         margin: 39px 0 0 0;
         width: 100%;
         max-width: 652px;
-    }
-
-    
+    }    
 }

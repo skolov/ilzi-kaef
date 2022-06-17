@@ -13,7 +13,7 @@ $(() => {
         TABS: `.${ELEMENT.TABS}`,
         TAB: `.${ELEMENT.TAB}`,
         CONTENT: `.${ELEMENT.CONTENT}`,
-        ACTLINEONE: `.${ELEMENT.CONTENT}`,
+        ACTLINEONE: `.${ELEMENT.ACTLINEONE}`,
     }
 
     const MODIFIER = {
@@ -25,9 +25,9 @@ $(() => {
     const $tabsWrapper = $(SELECTOR.TABS, $root)
     const $tabs = $(SELECTOR.TAB, $tabsWrapper)
     const $tabsContent = $(SELECTOR.CONTENT, $root)
-    const $lineOne = $(SELECTOR.CONTENT, $root)
+    const $lineOne = $(SELECTOR.ACTLINEONE, $root)
 
-    console.log($lineOne, 'ddd')
+    console.log($lineOne, 'lineOne')
 
     $tabs.each(function () {
         const $tab = $(this)
